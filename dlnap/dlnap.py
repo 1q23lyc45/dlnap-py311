@@ -378,7 +378,7 @@ def _get_location_url(raw):
     raw -- raw discovery response
     return -- location url string
     """
-    t = re.findall('\n(?i)location:\s*(.*)\r\s*', raw, re.M)
+    t = re.findall('(?i)\nlocation:\s*(.*)\r\s*', raw, re.M)
     if len(t) > 0:
         return t[0]
     return ''
